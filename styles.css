@@ -62,3 +62,142 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 /* CSS Reset */
+
+/* Variables */
+:root {
+  /* Colors */
+  --green: #44ffa1;
+  --purple-dark: #24053e;
+  --purple-medium: #584d62;
+  --purple-light: #fcf8ff;
+  --white: #fff;
+}
+
+/* Utility Classes */
+/* Colors */
+.white {
+  color: var(--white);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.purple-dark {
+  color: var(--purple-dark);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+/* Text Presets */
+.text-preset-1 {
+  font-family: "Fraunces", serif;
+  font-size: 5rem;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.text-preset-2 {
+  font-family: "Fraunces", serif;
+  font-size: 3.5rem;
+  line-height: 120%;
+  font-weight: 600;
+}
+
+.text-preset-3 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  line-height: 120%;
+  font-weight: 600;
+}
+
+.text-preset-4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  line-height: 180%;
+  font-weight: 400;
+}
+
+.text-preset-5 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  line-height: 180%;
+  font-weight: 700;
+}
+
+/* Body */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background-color: var(--purple-dark);
+  height: 99vh;
+  clip-path: ellipse(140% 100% at 50% 0%);
+  z-index: -1;
+}
+
+/* Decorative Circles */
+.circles-1 {
+  position: absolute;
+  left: -6rem;
+  top: 20vh;
+}
+
+.circles-2 {
+  position: absolute;
+  right: -3rem;
+  top: 50vh;
+}
+
+/* Header */
+header {
+  padding-inline: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+header a {
+  text-decoration: none;
+  position: relative;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  background-color: var(--green);
+  height: 3px;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+
+/* Hero */
+h1 {
+    width: 100vw;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+h1 span {
+  position: relative;
+}
+
+h1 span::after {
+  content: "";
+  position: absolute;
+  background-color: var(--green);
+  height: 3px;
+  bottom: 7px;
+  left: 0;
+  right: 0;
+}
