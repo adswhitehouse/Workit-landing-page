@@ -175,6 +175,11 @@ header {
 header a {
   text-decoration: none;
   position: relative;
+  transition: color 0.25s;
+}
+
+header a:hover {
+  color: var(--green);
 }
 
 header a::after {
@@ -219,6 +224,13 @@ h1 span::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--green);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.hero a:hover {
+  background-color: transparent;
+  color: var(--green);
 }
 
 .hero img {
@@ -278,7 +290,6 @@ h1 span::after {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
 }
 
 .application-box {
@@ -306,4 +317,38 @@ h1 span::after {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  border: 2px solid var(--green);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.application-box a:hover {
+  background-color: transparent;
+  color: var(--green);
+}
+
+/* Footer */
+footer {
+  padding-block: 7rem;
+}
+
+.footer-logo {
+  margin-inline: auto;
+  margin-bottom: 4.5rem;
+}
+
+.social-links {
+  display: flex;
+  margin-inline: auto;
+  width: fit-content;
+  gap: 1.5rem;
+  font-size: 1.75rem;
+  color: var(--purple-medium);
+}
+
+.social-links a {
+  transition: color 0.25s;
+}
+
+.social-links a:hover {
+  color: var(--purple-dark);
 }
