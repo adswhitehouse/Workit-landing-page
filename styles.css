@@ -87,6 +87,10 @@ textarea:not([rows]) {
   color: var(--purple-dark);
 }
 
+.bg-purple-dark {
+  background-color: var(--purple-dark);
+}
+
 .bg-green {
   background-color: var(--green);
 }
@@ -209,8 +213,12 @@ h1 span::after {
 .hero a {
   text-decoration: none;
   margin-top: 2rem;
-  display: inline-block;
-  padding: 0.5rem 1rem;
+  margin-inline: auto;
+  height: 3rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero img {
@@ -251,4 +259,51 @@ h1 span::after {
 
 .list ul li h2 {
   margin-block: 2rem 1rem;
+}
+
+/* Apply */
+.apply {
+  padding-inline: 10vw;
+  padding-top: 7rem;
+}
+
+.apply-content {
+  position: relative;
+  padding-top: 10.5rem;
+}
+
+.founder {
+  max-width: 40%;
+  min-width: 16rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.application-box {
+  max-width: 67.5%;
+  margin-left: auto;
+  position: relative;
+  padding: 4rem;
+}
+
+.circles-3 {
+  position: absolute;
+  bottom: -4rem;
+  right: 4rem;
+  width: 10rem;
+}
+
+.application-box p {
+  margin-block: 2rem;
+}
+
+.application-box a {
+  height: 3rem;
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
