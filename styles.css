@@ -71,6 +71,12 @@ textarea:not([rows]) {
   --purple-medium: #584d62;
   --purple-light: #fcf8ff;
   --white: #fff;
+
+  /* Font Sizes */
+  --fsxl: 5rem;
+  --fsl: 3.5rem;
+  --fsm: 2rem;
+  --fss: 1.125rem;
 }
 
 /* Utility Classes */
@@ -98,37 +104,42 @@ textarea:not([rows]) {
 /* Text Presets */
 .text-preset-1 {
   font-family: "Fraunces", serif;
-  font-size: 5rem;
+  font-size: var(--fsxl);
   line-height: 100%;
   font-weight: 600;
 }
 
 .text-preset-2 {
   font-family: "Fraunces", serif;
-  font-size: 3.5rem;
+  font-size: var(--fsl);
   line-height: 120%;
   font-weight: 600;
 }
 
 .text-preset-3 {
   font-family: "Fraunces", serif;
-  font-size: 2rem;
+  font-size: var(--fsm);
   line-height: 120%;
   font-weight: 600;
 }
 
 .text-preset-4 {
   font-family: "Manrope", sans-serif;
-  font-size: 1.125rem;
+  font-size: var(--fss);
   line-height: 180%;
   font-weight: 400;
 }
 
 .text-preset-5 {
   font-family: "Manrope", sans-serif;
-  font-size: 1.125rem;
+  font-size: var(--fss);
   line-height: 180%;
   font-weight: 700;
+}
+
+/* HTML */
+html {
+  overflow-x: hidden;
 }
 
 /* Body */
@@ -141,9 +152,9 @@ body::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: var(--purple-dark);
-  height: 99vh;
+  height: 770px;
   clip-path: ellipse(140% 100% at 50% 0%);
   z-index: -2;
 }
@@ -151,15 +162,15 @@ body::after {
 /* Decorative Circles */
 .circles-1 {
   position: absolute;
-  left: -6rem;
-  top: 20vh;
+  left: -7rem;
+  top: 8rem;
   z-index: -1;
 }
 
 .circles-2 {
   position: absolute;
-  right: -3rem;
-  top: 50vh;
+  right: -4rem;
+  top: 17rem;
   z-index: -1;
 }
 
@@ -195,6 +206,7 @@ header a::after {
 /* Hero */
 .hero {
   text-align: center;
+  padding-inline: 10vw;
 }
 
 h1 {
@@ -236,12 +248,12 @@ h1 span::after {
 .hero img {
   width: 48rem;
   margin-inline: auto;
-  margin-top: 5.5rem;
+  margin-block: 5.5rem 3rem;
 }
 
 /* List */
 .list {
-  padding: 5.5rem 10vw 9rem;
+  padding: 2.5rem 10vw 9rem;
 }
 
 .list ul {
@@ -267,10 +279,11 @@ h1 span::after {
   justify-content: center;
   border-radius: 50%;
   margin-inline: auto;
+  margin-bottom: 2rem;
 }
 
 .list ul li h2 {
-  margin-block: 2rem 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Apply */
@@ -351,4 +364,112 @@ footer {
 
 .social-links a:hover {
   color: var(--purple-dark);
+}
+
+/* Media Queries */
+@media screen and (max-width: 50rem) {
+  /* Variables */
+  :root {
+    --fsxl: 3.75rem;
+    --fsl: 3rem;
+    --fsm: 1.75rem;
+    --fss: 1rem;
+  }
+
+  /* List */
+  .list ul {
+    flex-direction: column;
+  }
+
+  .list ul li {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .list ul li span {
+    margin-bottom: 0;
+  }
+
+  .list {
+    padding-bottom: 0;
+  }
+
+  /* Body */
+  body::after {
+    height: 540px;
+  }
+
+  /* Hero */
+  .hero img {
+    margin-top: 2rem;
+  }
+
+  /* Apply */
+  .application-box {
+    max-width: 90%;
+    padding: 3rem;
+  }
+
+  /* Decorative Circles */
+  .circles-1 {
+    left: -12rem;
+  }
+
+  .circles-2 {
+    right: -6rem;
+  }
+}
+
+@media screen and (max-width: 35rem) {
+  /* Variables */
+  :root {
+    --fsxl: 3rem;
+    --fsl: 2rem;
+    --fsm: 1.5rem;
+  }
+
+  /* Circles */
+  .circles-1,
+  .circles-2,
+  .circles-3 {
+    display: none;
+  }
+
+  /* Apply */
+  .application-box {
+    max-width: 100%;
+    text-align: center;
+    padding: 2rem;
+  }
+  .application-box a {
+    margin-inline: auto;
+    width: 10rem;
+  }
+
+  .founder {
+    max-width: 100%;
+    min-width: 0;
+    position: relative;
+    top: 5rem;
+  }
+
+  .apply-content {
+    padding-top: 0;
+  }
+
+  .apply {
+    padding-top: 3rem;
+  }
+
+  /* Footer */
+  footer {
+    padding-block: 3.5rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 2rem;
+  }
 }
